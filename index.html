@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tenerife Holiday Locations</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Tenerife Holiday Locations</h1>
+    <p>Explore the best holiday locations in Tenerife!</p>
+  </header>
+
+  <section id="locations">
+    <h2>Our Top 6 Locations</h2>
+    <div class="gallery">
+      <div class="location" data-lat="28.2916" data-lng="-16.6291" role="button" tabindex="0">
+        <img src="assets/images/santa_cruz.JPG" alt="Santa Cruz" loading="lazy" decoding="async"/>
+        <p>Santa Cruz</p>
+      </div>
+      <div class="location" data-lat="28.0954" data-lng="-16.7245" role="button" tabindex="0">
+        <img src="assets/images/puerto_de_la_cruz.JPG" alt="Puerto de la Cruz" loading="lazy" decoding="async"/>
+        <p>Puerto de la Cruz</p>
+      </div>
+      <div class="location" data-lat="28.4520" data-lng="-16.2633" role="button" tabindex="0">
+        <img src="assets/images/la_laguna.JPG" alt="La Laguna" loading="lazy" decoding="async"/>
+        <p>La Laguna</p>
+      </div>
+      <div class="location" data-lat="28.0841" data-lng="-16.7631" role="button" tabindex="0">
+        <img src="assets/images/los_cristianos.JPG" alt="Los Cristianos" loading="lazy" decoding="async"/>
+        <p>Los Cristianos</p>
+      </div>
+      <div class="location" data-lat="28.0486" data-lng="-16.5939" role="button" tabindex="0">
+        <img src="assets/images/playa_de_las_americas.JPG" alt="Playa de las Américas" loading="lazy" decoding="async"/>
+        <p>Playa de las Américas</p>
+      </div>
+      <div class="location" data-lat="28.1273" data-lng="-16.5405" role="button" tabindex="0">
+        <img src="assets/images/costa_adeje.JPG" alt="Costa Adeje" loading="lazy" decoding="async"/>
+        <p>Costa Adeje</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="map">
+    <h2>Map</h2>
+    <div id="googleMap" style="width:100%;height:500px;"></div>
+  </section>
+
+
+  <!-- Your script first -->
+  <script src="script.js"></script>
+  <!-- Maps API last; keep async+defer but ensure global callback exists -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfAweSHiIkl7zpgybOqBNqaw_ONaG5Aic&callback=initMap"></script>
+</body>
+</html>
