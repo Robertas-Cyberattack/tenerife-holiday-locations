@@ -1,16 +1,149 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tenerife Holiday Locations</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  Hello world
-  <script src="script.js"></script>
-</body>
+  <!-- Header -->
+  <header>
+    <div class="wrap">
+      <h1>Tenerife Holiday Locations</h1>
+      <p class="tag">Explore the best holiday locations in Tenerife!</p>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#locations">Locations</a></li>
+          <li><a href="#map">Map</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <!-- Search -->
+  <section id="search" class="wrap">
+    <h2>Find a Location</h2>
+    <form id="searchForm" aria-label="Search locations">
+      <input id="searchInput" type="text" placeholder="Type a location (e.g. El Médano)" aria-label="Search input" />
+      <button type="submit">Search</button>
+      <button id="resetSearch" type="button">Reset</button>
+    </form>
+    <p id="searchFeedback" class="feedback" aria-live="polite"></p>
+  </section>
+
+  <!-- Main Content -->
+  <main class="wrap main-layout">
+    <!-- Locations -->
+    <section id="locations" class="locations">
+      <h2>Our Top 6 Locations</h2>
+      <div class="gallery">
+        <div class="location" tabindex="0" data-lat="28.2916" data-lng="-16.6291" data-name="Santa Cruz">
+          <img src="assets/images/santa_cruz.JPG" alt="Santa Cruz" />
+          <div class="desc">
+            <h3>Santa Cruz</h3>
+            <p>Population: 210,000. Visit Plaza de España, Auditorio de Tenerife, shopping streets.</p>
+          </div>
+        </div>
+
+        <div class="location" tabindex="0" data-lat="28.0954" data-lng="-16.7245" data-name="Puerto de la Cruz">
+          <img src="assets/images/puerto_de_la_cruz.JPG" alt="Puerto de la Cruz" />
+          <div class="desc">
+            <h3>Puerto de la Cruz</h3>
+            <p>Population: 32,000. Visit Loro Parque, beaches, and old town streets.</p>
+          </div>
+        </div>
+
+        <div class="location" tabindex="0" data-lat="28.4520" data-lng="-16.2633" data-name="La Laguna">
+          <img src="assets/images/la_laguna.JPG" alt="La Laguna" />
+          <div class="desc">
+            <h3>La Laguna</h3>
+            <p>Population: 150,000. UNESCO heritage city, historical buildings, university area.</p>
+          </div>
+        </div>
+
+        <div class="location" tabindex="0" data-lat="28.0841" data-lng="-16.7631" data-name="Los Cristianos">
+          <img src="assets/images/los_cristianos.JPG" alt="Los Cristianos" />
+          <div class="desc">
+            <h3>Los Cristianos</h3>
+            <p>Population: 21,000. Beaches, boat trips, nightlife, harbor area.</p>
+          </div>
+        </div>
+
+        <div class="location" tabindex="0" data-lat="28.0486" data-lng="-16.5939" data-name="Playa de las Américas">
+          <img src="assets/images/playa_de_las_americas.JPG" alt="Playa de las Américas" />
+          <div class="desc">
+            <h3>Playa de las Américas</h3>
+            <p>Population: 30,000. Surfing, nightlife, shopping, beach activities.</p>
+          </div>
+        </div>
+
+        <div class="location" tabindex="0" data-lat="28.1273" data-lng="-16.5405" data-name="Costa Adeje">
+          <img src="assets/images/costa_adeje.JPG" alt="Costa Adeje" />
+          <div class="desc">
+            <h3>Costa Adeje</h3>
+            <p>Population: 25,000. Luxury resorts, water parks, whale watching, golf.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section id="map" class="map-container">
+      <h2>Map</h2>
+      <div id="mapLoader">Loading map...</div>
+      <div id="googleMap" class="loading"></div>
+    </section>
+  </main>
+
+  <!-- Contact -->
+  <section id="contact" class="wrap">
+    <h2>Contact</h2>
+    <form id="contactForm" novalidate>
+      <label>
+        Name
+        <input id="contactName" name="name" type="text" required />
+      </label>
+      <label>
+        Email
+        <input id="contactEmail" name="email" type="email" required />
+      </label>
+      <label>
+        Message
+        <textarea id="contactMessage" name="message" rows="4" required></textarea>
+      </label>
+      <div class="contact-actions">
+        <button type="submit">Send</button>
+      </div>
+      <p id="contactFeedback" class="feedback" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <small>Made with ❤️ — Tenerife student project</small>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+
+  <!-- Keep your existing Google Maps API key exactly as it is -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfAweSHiIkl7zpgybOqBNqaw_ONaG5Aic&callback=initMap"></script>
+
+  <script>
+    // Fallback if Google Maps fails
+    window.addEventListener('error', function(e) {
+      if (e.target.tagName === 'SCRIPT' && e.target.src.includes('maps.googleapis.com')) {
+        const mapEl = document.getElementById('googleMap');
+        if (mapEl) {
+          mapEl.innerHTML = '<p style="color:red; padding:20px;">Map failed to load. Please try again later.</p>';
+        }
+      }
+    }, true);
+  </script>
+</body>
 </html>

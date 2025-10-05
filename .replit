@@ -10,7 +10,6 @@ publicDir = "/"
 deploymentTarget = "static"
 
 [workflows]
-runButton = "Serve static"
 
 [[workflows.workflow]]
 name = "Serve static"
@@ -28,3 +27,6 @@ waitForPort = 80
 [[ports]]
 localPort = 80
 externalPort = 80
+
+[agent]
+expertMode = true

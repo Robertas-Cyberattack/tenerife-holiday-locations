@@ -1,4 +1,335 @@
-html {
-  height: 100%;
+/* ================================
+   Tenerife Holiday Locations - CSS
+   ================================ */
+
+/* Base Styles */
+:root {
+  --bg: #ffffff;
+  --primary: #006d77;
+  --secondary: #83c5be;
+  --accent: #ffb703;
+  --text: #333;
+  --muted: #777;
+  --border: #e0e0e0;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --radius: 12px;
+  --transition: 0.25s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: var(--radius);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.wrap {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 2rem 0 1rem;
+  box-shadow: 0 2px 5px var(--shadow);
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+header .tag {
+  font-size: 1rem;
+  color: #e0f7fa;
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #fff;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* Search Section */
+#search {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+#search h2 {
+  margin-bottom: 1rem;
+}
+
+#searchForm {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+#searchForm input {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  min-width: 250px;
+  font-size: 1rem;
+}
+
+#searchForm button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#searchForm button:hover {
+  background: var(--secondary);
+  color: var(--text);
+}
+
+.feedback {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Main Layout */
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-bottom: 2rem;
+}
+
+/* Locations Section */
+.locations {
+  text-align: center;
+}
+
+.locations h2 {
+  margin-bottom: 1.5rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.location {
+  background: #f9f9f9;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px var(--shadow);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.location:hover,
+.location:focus {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px var(--shadow);
+  outline: none;
+}
+
+.location .desc {
+  padding: 1rem;
+}
+
+.location h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+/* Map Section */
+.map-container {
+  text-align: center;
+}
+
+#mapLoader {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: var(--muted);
+  animation: fadeIn 1s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+#googleMap {
   width: 100%;
+  height: 400px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 6px var(--shadow);
+}
+
+#googleMap.loading {
+  display: none;
+}
+
+/* Contact Section */
+#contact {
+  padding: 2rem 0;
+}
+
+#contact form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#contact label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+#contact input,
+#contact textarea {
+  padding: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255, 183, 3, 0.2);
+}
+
+.contact-actions {
+  text-align: center;
+}
+
+#contact button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#contact button:hover {
+  background: var(--secondary);
+  color: var(--text);
+}
+
+/* Footer */
+footer {
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  box-shadow: 0 -2px 5px var(--shadow);
+}
+
+footer small {
+  font-size: 0.9rem;
+}
+
+/* Accessibility Focus */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+  #searchForm input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  #googleMap {
+    height: 300px;
+  }
+
+  #contact form {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+
+  #searchForm button {
+    width: 100%;
+  }
+
+  .location .desc {
+    padding: 0.8rem;
+  }
 }
