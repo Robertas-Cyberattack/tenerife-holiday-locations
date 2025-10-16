@@ -286,7 +286,7 @@ Screenshots of the live version and performance local metrics are available in:
 
 4\. Visit:  
 
-&nbsp;  🔗 \[https://Robertas-Cyberattack.github.io/tenerife-holiday-locations/](https://Robertas-Cyberattack.github.io/tenerife-holiday-locations/)
+&nbsp;  🔗 https://Robertas-Cyberattack.github.io/tenerife-holiday-locations/
 
 
 
