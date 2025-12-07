@@ -751,16 +751,15 @@ The project is hosted using GitHub Pages.
 
 - Google Maps API Documentation.
 - W3C HTML & CSS Validators.
-- JSLint.
-- StackOverflow Email Regex Reference.
-- Icons, tools, and frameworks are used under their respective licenses.
-- Core development by **Robertas Cyberattack**.
-
+- JSHint.
+- Development by **Robertas-Cyberattack**.
+- Photos from iStockPhoto.com
+  
 ---
 
 <a id="acknowledgements"></a>
-## 10. Acknowledgements
+## 10. Acknowledgement
 
-- Tutors and peers for guidance.
-- Online documentation for supporting code validation and accessibility techniques.
-- Inspiration from Tenerife tourism resources.
+- My wife, Rutai, for allowing me time to work on this project.
+- Tutor Manuel Perez Romero — for his patience and guidance.
+- All coding community members for helping and answering questions.
