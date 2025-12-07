@@ -210,3 +210,89 @@ This structure prioritises ease of use, accessibility, and clean information flo
 
 - Lighthouse Performance Score: 96.
 - Optimised images and clean JavaScript logic.
+
+  <a id="device-testing"></a>
+### 6.6 Device Testing
+
+Successfully tested on:
+
+- Desktop (Windows & macOS)
+- Mobile (iPhone, Samsung)
+- Tablet devices
+
+<a id="browser-compatibility"></a>
+### 6.7 Browser Compatibility
+
+Tested on:
+
+- Chrome
+- Firefox
+- Safari
+- Edge
+
+<a id="testing-user-stories"></a>
+### 6.8 Testing User Stories
+
+- All user stories were tested and passed successfully.
+- Full test documentation is stored in `/docs/testing/`.
+
+---
+
+<a id="bugs"></a>
+## 7. Bugs
+
+### Fixed
+
+- Search results not resetting correctly.
+- Missing keyboard accessibility for markers.
+- Minor JSLint styling warnings.
+
+### Unresolved
+
+- None — all tests passed successfully.
+
+---
+
+<a id="deployment"></a>
+## 8. Deployment
+
+### Deployment Method
+
+The project is hosted using GitHub Pages.
+
+### Steps
+
+1. Commit all changes to the `main` branch.
+2. Push to GitHub.
+3. Go to **Settings → Pages**.
+4. Set source to the `main` branch.
+5. Save and view the live URL:  
+   <https://Robertas-Cyberattack.github.io/tenerife-holiday-locations/>
+
+### Post-deployment checks
+
+- No console errors.
+- Fully responsive.
+- Google Maps API loads correctly.
+- 404 redirect confirmed.
+
+---
+
+<a id="credits"></a>
+## 9. Credits
+
+- Google Maps API Documentation.
+- W3C HTML & CSS Validators.
+- JSLint.
+- StackOverflow Email Regex Reference.
+- Icons, tools, and frameworks are used under their respective licenses.
+- Core development by **Robertas Cyberattack**.
+
+---
+
+<a id="acknowledgements"></a>
+## 10. Acknowledgements
+
+- Tutors and peers for guidance.
+- Online documentation for supporting code validation and accessibility techniques.
+- Inspiration from Tenerife tourism resources.
