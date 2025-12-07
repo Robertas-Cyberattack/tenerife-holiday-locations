@@ -1,4 +1,9 @@
 # Tenerife Holiday Locations
+(Developer: Robertas Sladkevicius)
+
+<img src="docs/design/MP2-THL-MOCKUP.png">
+
+[Live Webpage](https://robertas-cyberattack.github.io/tenerife-holiday-locations/)
 
 ## Table of Contents
 1. [Project Goals](#project-goals)
@@ -105,17 +110,31 @@ As a user, I want to:
 <a id="colours"></a>
 ### 3.2 Colours
 
-A calming colour palette reflecting Tenerife’s natural scenery:
+The overall design focuses on being clean, calm, and easy to scan, reflecting the feel of a modern travel website:
 
-- Blue tones for trust and clarity.
-- Light neutral backgrounds for readability.
-- High-contrast accents for accessibility.
+- A **simple, card-based layout** presents each location with an image and short description, making it easy to browse and compare destinations.
+- A clear **information hierarchy** is created using headings (`h1`, `h2`, `h3`), spacing, and consistent card structure so users can quickly understand each section.
+- **Visual emphasis** is given to interactive elements such as buttons, navigation links, and location cards using colour, hover states, and box shadows.
+- The layout is **responsive by design**, using Flexbox and CSS Grid (e.g. the `.gallery` grid and `.main-layout` flex column) to adapt to different screen sizes.
+- **Accessibility and clarity** are supported through good contrast, focus outlines, ARIA labels on navigation and live regions, and keyboard-focusable location cards (`tabindex="0"`).
 
 <a id="fonts"></a>
 ### 3.3 Fonts
 
-- Modern sans-serif fonts chosen for clarity and readability.
-- Consistent typographic scale for structure and emphasis.
+The colour palette is defined using CSS custom properties in the `:root` selector, making it easy to maintain and extend:
+
+css
+:root {
+  --bg: #ffffff;
+  --primary: #006d77;
+  --secondary: #83c5be;
+  --accent: #ffb703;
+  --text: #333;
+  --muted: #777;
+  --border: #e0e0e0;
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
 
 <a id="structure"></a>
 ### 3.4 Structure
@@ -135,7 +154,8 @@ This structure prioritises ease of use, accessibility, and clean information flo
 <a id="wireframes"></a>
 ### 3.5 Wireframes
 
-- Wireframes produced in Figma.
+- Wireframe produced in Balsamiq.
+  <img src="docs/design/MP2-THL-WIREFRAME.png">
 - Stored in `/docs/design/`.
 - Final site accurately follows the intended structure.
 
@@ -149,15 +169,15 @@ This structure prioritises ease of use, accessibility, and clean information flo
 
 - HTML5
 - CSS3
-- JavaScript ES6
+- JavaScript
 
 <a id="frameworks--tools"></a>
 ### 4.2 Frameworks & Tools
 
 - Google Maps API
 - W3C Validators (HTML & CSS)
-- JSLint
-- Figma for wireframes
+- JSHint
+- Balsamiq for wireframes
 - Git & GitHub for version control and deployment
 - Chrome Lighthouse for performance testing
 
@@ -183,6 +203,7 @@ This structure prioritises ease of use, accessibility, and clean information flo
 ### 6.1 HTML Validation
 
 - Tested using W3C Nu HTML Checker.
+  <img src="docs/testing/Nu-HTML-Checker-07122025.png">
 - 0 errors, only minor warnings.
 - Screenshots located in `/docs/testing/`.
 
@@ -190,25 +211,31 @@ This structure prioritises ease of use, accessibility, and clean information flo
 ### 6.2 CSS Validation
 
 - Tested using W3C CSS Validator.
+<img src="docs/testing/CSS-Validator-07122025.png">
 - 0 errors, minor warnings for custom properties.
 
 <a id="javascript-validation"></a>
 ### 6.3 JavaScript Validation
 
-- JSLint used for validation.
+- JSHint used for validation.
+ <img src="docs/testing/JSHint-JS-Validation-07122025.png">
 - No major issues.
-- 41 stylistic warnings (non-functional).
+- Two warnings: Functions declared withing loops referencing an outer scoped variable may lead to confusing semantics (map).
 
 <a id="accessibility"></a>
 ### 6.4 Accessibility
 
 - Lighthouse Accessibility Score: 100.
+  <img src="docs/testing/Lighthouse-Accessibility-07122025.png">
 - Includes proper ARIA roles, alt text, and keyboard navigation.
 
 <a id="performance"></a>
 ### 6.5 Performance
 
-- Lighthouse Performance Score: 96.
+- Lighthouse Performance Score: 72.
+  <img src="docs/testing/Lighthouse-Performance-07122025.png">
+- Performace live metrics
+  <img src="docs/testing/screenshots/performance-live-metrics.png">
 - Optimised images and clean JavaScript logic.
 
   <a id="device-testing"></a>
@@ -234,6 +261,22 @@ Tested on:
 ### 6.8 Testing User Stories
 
 - All user stories were tested and passed successfully.
+  
+  - Extra Large Screen:
+   <img src="docs/testing/screenshots/xlarge.png">
+
+  - Large Screen:
+   <img src="docs/testing/screenshots/large.png">
+
+
+
+  - Medium Screen:
+   <img src="docs/testing/screenshots/medium.png">
+
+
+
+  - Small Screen:
+   <img src="docs/testing/screenshots/small.png">
 - Full test documentation is stored in `/docs/testing/`.
 
 ---
