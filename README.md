@@ -213,7 +213,8 @@ As a user, I want to:
 - Submit a form with validation to ensure my message is correct.
 ![Validation](assets/images/user_story_validation.png)
   
-- Use the site easily on mobile and desktop.
+- Use the site easily on mobile and desktop
+----------------------------------------------------------------
 ![mobile](assets/images/user_story_use_mobile.png)
 ![pc](assets/images/user_story_use_pc.png)
 
