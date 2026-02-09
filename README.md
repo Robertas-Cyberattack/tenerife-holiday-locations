@@ -202,10 +202,20 @@ Users expect:
 As a user, I want to:
 
 - Explore Tenerife on a map with helpful markers.
+![Map with helpful markers](assets/images/user_story_validation.png)
+
 - Search locations to find specific information quickly.
+![Search for specific information](assets/images/user_story_search.png)
+
 - See images, descriptions, and population details.
+![Images, descriptions and details](assets/images/user_story_see.png)
+
 - Submit a form with validation to ensure my message is correct.
+![Validation](assets/images/user_story_validation.png)
+  
 - Use the site easily on mobile and desktop.
+![mobile](assets/images/user_story_use_mobile.png)
+![pc](assets/images/user_story_use_pc.png)
 
 ---
 
